@@ -1,0 +1,39 @@
+{
+  "name": "mern-admin",
+  "version": "1.0.0",
+  "description": "rest Api for mern admin",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js",
+    "swagger": "node ./swagger/swagger.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "mern-admin"
+  },
+  "keywords": [
+    "mern",
+    "admin"
+  ],
+  "author": "ikhlaq",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.17.1",
+    "express-jwt": "^5.3.1",
+    "express-jwt-authz": "^2.3.1",
+    "express-validator": "^6.2.0",
+    "joi": "^17.13.1",
+    "jsonwebtoken": "^8.5.1",
+    "jwks-rsa": "^1.6.0",
+    "mongoose": "^5.6.13",
+    "nodemon": "^2.0.2",
+    "swagger-autogen": "^2.23.7",
+    "swagger-jsdoc": "^3.5.0",
+    "swagger-ui-express": "^4.1.2"
+  }
+}
