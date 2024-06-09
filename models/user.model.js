@@ -54,11 +54,23 @@ module.exports.validateUser = (body, isUpdating = false) => {
       name: Joi.string().required(),
       address: Joi.string().required(),
       email: Joi.string().email().required(),
-      phone: Joi.string().pattern(this.PhoneRegex).required(), // validate phone
+      phone: Joi.string().pattern(this.PhoneRegex).required(),
+
       password: isUpdating ? Joi.string().min(6) : Joi.string().min(6).required(),
       nationalId: Joi.string().pattern(this.NationalIdPattern).length(16).required(),
     }).validate(body);
   };
+  module.exports.validateUserUpdate = (user) => {
+    const schema = Joi.object({
+      name: Joi.string().min(3).max(50),
+      email: Joi.string().min(5).max(255).email(),
+      phone: Joi.string().min(10).max(15),
+      address: Joi.string().min(5).max(255),
+      nationalId: Joi.string().min(5).max(20),
+    });
+  
+    return schema.validate(user);
+  }
   module.exports.validateUserLogin = (body) => {
     return Joi.object({
       email: Joi.string().email().required(),

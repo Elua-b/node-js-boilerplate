@@ -10,4 +10,15 @@ router.use("/user", userRouter
     }] 
 */
 );
+
+const todoRouter =require ("./todo.route");
+router.use("/todo", todoRouter
+/* 
+  #swagger.tags = ['Todo']
+  
+  #swagger.security = [{
+            "bearerAuth": []
+    }] 
+*/
+);
 module.exports=router
