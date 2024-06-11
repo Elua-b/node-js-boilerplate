@@ -115,4 +115,4 @@ router.put('/food/:foodId', foodController.updateFood);
 router.delete('/food/:foodId', foodController.deleteFood);
 
 
-module.exports = router;  
+module.exports = router;
